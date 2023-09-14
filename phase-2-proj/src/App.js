@@ -1,6 +1,8 @@
 import React from "react";
 import { Route, Routes } from 'react-router-dom';
 
+import "./App.css"
+
 
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
@@ -14,9 +16,9 @@ function App() {
       <Header />
       <NavBar />
       <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/mystery" element={<Mystery />} />
+          <Route className="route" exact path="/" element={<Home />}/>
+          <Route className="route" path="/about" element={<About />}/>
+          <Route className="route" path="/mystery" element={<Mystery />}/>
         </Routes>
     </div>
   );

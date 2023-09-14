@@ -1,0 +1,18 @@
+.navbar{
+    margin: 30px;
+    border-top: 2px solid #5C4033;
+    border-bottom: 2px solid #5C4033;
+}
+
+.navbar  ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar ul li{
+    display: inline-block;
+}
+
+.link{
+    text-decoration: none;
+}
