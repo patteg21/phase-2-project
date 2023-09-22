@@ -29,3 +29,5 @@ It will prompt to run on a different port, continue with entering 'y'. It is lik
 ## Info
 
 The project is comprised of three pages, "Home", "About", and "Mystery". The naming of these are largely irrelevant. Feel free to navigate and add items into the DB. This can be achieved by simply inputting information into the form.
+
+The project will only make a single get request, unless refreshed.
