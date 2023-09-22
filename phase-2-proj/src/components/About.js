@@ -1,22 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function About({setFormData}){
-    const [displayData, setDisplayData] = useState([{}])
-    const [isLoading, setIsLoading] = useState(true)
-
-    useEffect(() =>{
-
-        fetch("http://localhost:3000/random")
-        .then(res => res.json())
-        .then(data => {
-
-        // intervalId = setInterval(()=>{
-            console.log(data)
-            setDisplayData(data)
-            setIsLoading(false)
-        // },3000)
-    })
-    },[setFormData]);
+function About({displayData, isLoading }){
 
 
     const display = displayData.map((data, index) =>(
