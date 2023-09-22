@@ -5,23 +5,17 @@ This project is intended to serve as my second project for the FlatIron school B
 ## Installation
 Install this library for router:
 
-'''bash
-npm install react-router-dom
-'''
+'''bash npm install react-router-dom'''
 
 ## Starting Project
 In order to start the project, cd into phase-2-project directory.
 
 In order to run it open a terminal and use this command:
-'''bash
-json-server --watch db.json
-'''
+'''bash json-server --watch db.json'''
 
 This will host the json database for the applicaiton.
 Next use this command in a seperate terminal:
-'''bash
-npm start
-'''
+'''bash npm start'''
 
 It will prompt to run on a different port, continue with entering 'y'. It is likely to run on port 3001
 
