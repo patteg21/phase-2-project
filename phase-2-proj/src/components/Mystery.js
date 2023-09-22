@@ -59,7 +59,6 @@ function Mystery({displayData, setDisplayData}){
                 <button type="submit">Submit</button>
             </form>
         </div>
-
     )
 }
 
