@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-function Mystery(){
-    const [formData, setFormData] = useState({
-        title: '',
-        description: '',
-        why: '',
-    });
+function Mystery({formData, setFormData}){
+    // const [formData, setFormData] = useState({
+    //     title: '',
+    //     description: '',
+    //     why: '',
+    // });
 
     function handleChange(e){
         const { name , value } = e.target

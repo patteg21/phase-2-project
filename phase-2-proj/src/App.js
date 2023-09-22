@@ -12,6 +12,11 @@ import Mystery from "./components/Mystery";
 
 function App() {
   const [timesClicked, setTimesClicked] = useState(0)
+  const [formData, setFormData] = useState({
+    title: '',
+    description: '',
+    why: '',
+});
   
 
 
@@ -21,8 +26,8 @@ function App() {
       <NavBar />
       <Routes>
           <Route className="route" exact path="/" element={<Home timesClicked={timesClicked}  setTimesClicked={setTimesClicked}/>}/>
-          <Route className="route" path="/about" element={<About />}/>
-          <Route className="route" path="/mystery" element={<Mystery />}/>
+          <Route className="route" path="/about" element={<About setFormData={setFormData}/>}/>
+          <Route className="route" path="/mystery" element={<Mystery formData={formData} setFormData={setFormData} />}/>
         </Routes>
     </div>
   );
