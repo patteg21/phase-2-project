@@ -1,6 +1,11 @@
-import React from "react";
+import React, {useState}from "react";
 
-function Mystery({formData, setFormData}){
+function Mystery({displayData, setDisplayData}){
+    const [formData, setFormData] = useState({
+        title: '',
+        description: '',
+        why: '',
+      });
 
     function handleChange(e){
         const { name , value } = e.target
@@ -22,10 +27,7 @@ function Mystery({formData, setFormData}){
             body: JSON.stringify(formData)
         })
         .then(res => res.json())
-        .then(data => console.log(data))
-    
-        console.log(formData)
-        console.log("It worked")
+        .then(data => setDisplayData([...displayData,formData]))
     }
 
 

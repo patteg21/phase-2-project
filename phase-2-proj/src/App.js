@@ -14,11 +14,7 @@ function App() {
   const [displayData, setDisplayData] = useState([{}])
   const [timesClicked, setTimesClicked] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
-  const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    why: '',
-  });
+
 
   // I know it calls everytime it is updated
   useEffect(() =>{
@@ -27,9 +23,8 @@ function App() {
     .then(data => {
       setDisplayData(data)
       setIsLoading(false)
-
     })
-  },[setFormData]);
+  },[]);
   
 
 
@@ -40,7 +35,7 @@ function App() {
       <Routes>
           <Route className="route" exact path="/" element={<Home timesClicked={timesClicked}  setTimesClicked={setTimesClicked}/>}/>
           <Route className="route" path="/about" element={<About displayData={displayData} isLoading={isLoading}/>}/>
-          <Route className="route" path="/mystery" element={<Mystery formData={formData} setFormData={setFormData} />}/>
+          <Route className="route" path="/mystery" element={<Mystery displayData={displayData} setDisplayData={setDisplayData}/>}/>
         </Routes>
     </div>
   );
