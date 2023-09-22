@@ -11,7 +11,7 @@ import About from "./components/About";
 import Mystery from "./components/Mystery";
 
 function App() {
-  const [displayData, setDisplayData] = useState([{}])
+  const [displayData, setDisplayData] = useState([])
   const [timesClicked, setTimesClicked] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
 

@@ -3,8 +3,8 @@ import React from "react";
 function About({displayData, isLoading }){
 
 
-    const display = displayData.map((data, index) =>(
-    <div key={index}>
+    const display = displayData.map((data) =>(
+    <div key={data.id}>
         <h3>Title: {data.title}</h3>
         <p>Description: {data.description}</p>
         <p>Why: {data.why}</p>

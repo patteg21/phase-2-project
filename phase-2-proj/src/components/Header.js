@@ -4,13 +4,7 @@ import "./css/header.css"
 
 
 function Header({timesClicked}){
-
-    const [multiplyClicks, setMultiplyClick] = useState(0)
-
-    useEffect(() => {
-         // eslint-disable-next-line
-        setMultiplyClick(timesClicked**2)
-    },[timesClicked])
+    let multiplyClicks = timesClicked ** 2
 
     return (
         <div className="Header">

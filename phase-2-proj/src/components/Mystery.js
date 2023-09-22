@@ -27,7 +27,7 @@ function Mystery({displayData, setDisplayData}){
             body: JSON.stringify(formData)
         })
         .then(res => res.json())
-        .then(data => setDisplayData([...displayData,formData]))
+        .then(data => setDisplayData([...displayData,data]))
     }
 
 
