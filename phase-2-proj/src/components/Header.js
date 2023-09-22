@@ -13,8 +13,7 @@ function Header({timesClicked}){
 
     return (
         <div className="Header">
-            <h1>Header</h1>
-            {multiplyClicks !== 0 ? <h1>{multiplyClicks}</h1>: <h1></h1>}
+            <h1>Header {multiplyClicks !== 0 ? <span>{multiplyClicks}</span> : ""}</h1>
         </div>
     )
 }
