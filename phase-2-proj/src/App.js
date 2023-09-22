@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect }from "react";
 import { Route, Routes } from 'react-router-dom';
 
 import "./App.css"
@@ -11,12 +11,16 @@ import About from "./components/About";
 import Mystery from "./components/Mystery";
 
 function App() {
+  const [timesClicked, setTimesClicked] = useState(0)
+  
+
+
   return (
     <div className="App">
       <Header />
       <NavBar />
       <Routes>
-          <Route className="route" exact path="/" element={<Home />}/>
+          <Route className="route" exact path="/" element={<Home timesClicked={timesClicked}  setTimesClicked={setTimesClicked}/>}/>
           <Route className="route" path="/about" element={<About />}/>
           <Route className="route" path="/mystery" element={<Mystery />}/>
         </Routes>
