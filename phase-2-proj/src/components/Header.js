@@ -4,11 +4,10 @@ import "./css/header.css"
 
 
 function Header({timesClicked}){
-    let multiplyClicks = timesClicked ** 2
 
     return (
         <div className="Header">
-            <h1>Header {multiplyClicks !== 0 ? <span>{multiplyClicks}</span> : ""}</h1>
+            {timesClicked !== 0 ? <h1>Blink-182 needs a comeback</h1> : <h1>Header</h1>}
         </div>
     )
 }

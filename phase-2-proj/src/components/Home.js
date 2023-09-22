@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 function Home({timesClicked, setTimesClicked}){
 
     function handleClick(){
-        setTimesClicked(prevTimesClicked => prevTimesClicked + 1)
+        setTimesClicked(prevTimesClicked => prevTimesClicked + 1 )
 
     }
 
