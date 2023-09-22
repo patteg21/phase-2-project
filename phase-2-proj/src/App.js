@@ -20,18 +20,15 @@ function App() {
     why: '',
   });
 
-useEffect(() =>{
-
-  fetch("http://localhost:3000/random")
-  .then(res => res.json())
-  .then(data => {
-
-  // intervalId = setInterval(()=>{
-      console.log(data)
+  // I know it calls everytime it is updated
+  useEffect(() =>{
+    fetch("http://localhost:3000/random")
+    .then(res => res.json())
+    .then(data => {
       setDisplayData(data)
       setIsLoading(false)
-  // },3000)
-  })
+
+    })
   },[setFormData]);
   
 
