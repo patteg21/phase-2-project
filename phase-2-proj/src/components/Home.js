@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 function Home({timesClicked, setTimesClicked}){
 
     function handleClick(){
-        console.log("Wow! I was clicked")
-        
         setTimesClicked(prevTimesClicked => prevTimesClicked + 1)
 
-        console.log(timesClicked)
     }
+
+    
 
     return (
         <div>
