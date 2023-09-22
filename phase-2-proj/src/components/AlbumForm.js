@@ -1,10 +1,10 @@
 import React, {useState}from "react";
 
-function Mystery({displayData, setDisplayData}){
+function AlbumForm({displayData, setDisplayData}){
     const [formData, setFormData] = useState({
         title: '',
         description: '',
-        why: '',
+        band: '',
       });
 
     function handleChange(e){
@@ -19,7 +19,7 @@ function Mystery({displayData, setDisplayData}){
     function handleSubmit(e){
         e.preventDefault();
 
-        fetch("http://localhost:3000/random",{
+        fetch("http://localhost:3000/albums",{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -33,12 +33,19 @@ function Mystery({displayData, setDisplayData}){
 
     return (
         <div>
-            <h1>Mystery</h1>
+            <h1>Album Form</h1>
             <form onSubmit={handleSubmit}>
                 Name
                 <input
                 value={formData.title}
                 name="title" 
+                type="text"
+                onChange={handleChange}
+                ></input>
+                Band
+                <input 
+                value={formData.band} 
+                name="band"
                 type="text"
                 onChange={handleChange}
                 ></input>
@@ -49,13 +56,6 @@ function Mystery({displayData, setDisplayData}){
                 type="text"
                 onChange={handleChange}
                 ></input>
-                Why
-                <input 
-                value={formData.why} 
-                name="why"
-                type="text"
-                onChange={handleChange}
-                ></input>
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -63,4 +63,4 @@ function Mystery({displayData, setDisplayData}){
 }
 
 
-export default Mystery
+export default AlbumForm

@@ -1,13 +1,13 @@
 import React from "react";
 
-function About({displayData, isLoading }){
+function Albums({displayData, isLoading }){
 
 
     const display = displayData.map((data) =>(
     <div key={data.id}>
         <h3>Title: {data.title}</h3>
+        <p>Band: {data.band}</p>
         <p>Description: {data.description}</p>
-        <p>Why: {data.why}</p>
       </div>
     ))
 
@@ -15,7 +15,7 @@ function About({displayData, isLoading }){
 
     return (
         <div>
-            <h1>About</h1>
+            <h1>Albums</h1>
             { isLoading ? "Loading..." : display}
         </div>
 
@@ -23,4 +23,4 @@ function About({displayData, isLoading }){
 }
 
 
-export default About
+export default Albums

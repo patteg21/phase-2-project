@@ -1,22 +1,10 @@
 {
-  "random": [
+  "albums": [
     {
-      "id": 1,
-      "title": "Random Thing",
-      "description": "OK Computer",
-      "why": "Why now?"
-    },
-    {
-      "title": "OK",
-      "description": "yes",
-      "why": "idk",
-      "id": 2
-    },
-    {
-      "title": "name",
-      "description": "desp",
-      "why": "not sure",
-      "id": 3
+      "title": "Mt. Joy",
+      "description": "upbeat",
+      "band": "Mt. Joy",
+      "id": 1
     }
   ]
 }
